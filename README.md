@@ -1,6 +1,6 @@
 # ComparingItems
 
------> IMPORTANT <-----
+-----> IMPORTANT <----- </br>
 If it fails to run due to an "Could not find a part of the path \roslyn\csc.exe" error, the solution is </br>
 to open Package manager console (Tools -> NuGet Package Manager -> Package Manager Console) and to update nugget packages with </br>
 Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r </br>
