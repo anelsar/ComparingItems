@@ -1,8 +1,8 @@
 # ComparingItems
 
-This app was built using ASP.NET MVC in Visual Studio 2019
-For page styling Bootstrap 4.1.2 was used
-For dependency injection Unity.mvc 5 was used
+This app was built using ASP.NET MVC in Visual Studio 2019 <br/>
+For page styling Bootstrap 4.1.2 was used <br/>
+For dependency injection Unity.mvc 5 was used <br/>
 The item values are stored in a .json file
 
 -----App description-----
