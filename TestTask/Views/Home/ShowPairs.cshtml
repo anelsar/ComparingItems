@@ -1,0 +1,56 @@
+﻿@model TestTask.Models.ShowPairsViewModel
+@{
+    TempData["test"] = TempData["allPlayedMatches"]; ;
+}
+<div class="container-fluid pt-5">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card shadow">
+                <div class="card-body mx-auto">
+                    <h4 class="text-center">Enter scores</h4>
+                    <hr />
+                    @if (TempData["allCombosPlayed"] == null)
+                    {
+                        using (Html.BeginForm("ManageItemsDetails", "Home"))
+                        {
+
+                            <div class="form-group">
+                                <div class="col">
+                                    @Html.Label(Model.FirstOpponent.Name, new { @class = "FieldLabel small" })
+                                    @Html.HiddenFor(m => m.FirstOpponent.Name)
+                                    @Html.TextBoxFor(m => m.FirstOpponentScore, new { @type = "number", @class = "form-control", placeholder = "Score" })
+                                    @Html.HiddenFor(m => m.FirstOpponent.Position)
+                                    @Html.HiddenFor(m => m.FirstOpponent.Score)
+                                    @Html.Label(Model.SecondOpponent.Name, new { @class = "FieldLabel small" })
+                                    @Html.HiddenFor(m => m.SecondOpponent.Name)
+                                    @Html.TextBoxFor(m => m.SecondOpponentScore, new { @type = "number", @class = "form-control", placeholder = "Score" })
+                                    @Html.HiddenFor(m => m.SecondOpponent.Position)
+                                    @Html.HiddenFor(m => m.SecondOpponent.Score)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+
+                                        <input type="submit" value="Generate new pair" class="btn btn-default col btn-success" />
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                        {
+                            <p class="text-success">
+                                @TempData["allCombosPlayed"].ToString()
+                            </p>
+                            @Html.ActionLink("Go back to rankings", "")
+                        }
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
